@@ -13,7 +13,15 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm install
+      - run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+
       - uses: actions/checkout@v3
       - run: ng build --configuration production
       - uses: FirebaseExtended/action-hosting-deploy@v0
