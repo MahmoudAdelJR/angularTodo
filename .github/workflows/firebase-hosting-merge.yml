@@ -45,8 +45,8 @@ jobs:
       #       /home/runner/work/angularTodo/angularTodo
       - run:
           npm install @angular-devkit/build-angular:browser
-        working-directory :
-                /home/runner/work/angularTodo/angularTodo
+        # working-directory :
+        #         /home/runner/work/angularTodo/angularTodo
       - run:
           yarn install
         working-directory :
