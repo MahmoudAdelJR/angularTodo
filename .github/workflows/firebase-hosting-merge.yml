@@ -13,18 +13,18 @@ jobs:
       - uses: actions/setup-node@v3.8.1
         with:
           node-version: 18
-      # - name: Print current directory
-      #   run: |
-      #       echo "Current directory: $(pwd)"
-      # - run:
-      #     npm install -g npm@latest
-      # - run:
-      #     npm cache clean --force
-      # - run:
-      #     npm rm -rf node_modules && rm package-lock.json
+      - name: Print current directory
+        run: |
+            echo "Current directory: $(pwd)"
+      - run:
+          npm install -g npm@latest
+      - run:
+          npm cache clean --force
+      - run:
+          npm rm -rf node_modules && rm package-lock.json
       - run: npm install
-        # working-directory :
-        #   /home/runner/work/angularTodo/angularTodo
+        working-directory :
+          /home/runner/work/angularTodo/angularTodo
 
       - uses: actions/checkout@v3
       - run: ng build --configuration production
