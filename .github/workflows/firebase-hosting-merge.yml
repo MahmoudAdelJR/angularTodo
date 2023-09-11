@@ -25,6 +25,8 @@ jobs:
       - run:
           npm rm -rf node_modules && rm package-lock.json
       - run:
+          npm init
+      - run:
           npm install
       - run:
           npm install -g @angular-devkit/build-angular:browser
