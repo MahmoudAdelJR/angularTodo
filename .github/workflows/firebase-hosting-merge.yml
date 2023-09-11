@@ -28,7 +28,7 @@ jobs:
       #     npm init
       #     npm install
       - run:
-          yarn install @angular-devkit/build-angular:browser
+          yarn add @angular-devkit/build-angular:browser
       - run:
           yarn install
         working-directory :
