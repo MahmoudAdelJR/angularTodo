@@ -20,10 +20,10 @@ jobs:
           npm install -g npm@latest
       - run:
           npm install -g @angular/cli
-      - run:
-          npm cache clean --force
-      - run:
-          npm rm -rf node_modules && rm package-lock.json
+      # - run:
+      #     npm cache clean --force
+      # - run:
+      #     npm rm -rf node_modules && rm package-lock.json
       - run: npm ci
         working-directory :
           /home/runner/work/angularTodo/angularTodo
