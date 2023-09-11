@@ -39,18 +39,19 @@ jobs:
           yarn config set registry https://registry.npmjs.org
         working-directory :
             /home/runner/work/angularTodo/angularTodo
-      # - run:
-      #     yarn add @angular-devkit/build-angular:browser
-      #   working-directory :
-      #       /home/runner/work/angularTodo/angularTodo
       - run:
-          npm install @angular-devkit/build-angular:browser
+          yarn add @angular-devkit/build-angular --dev
+          yarn add @angular-devkit/build-angular:browser
+        working-directory :
+            /home/runner/work/angularTodo/angularTodo
+      # - run:
+      #     npm install @angular-devkit/build-angular:browser
         # working-directory :
         #         /home/runner/work/angularTodo/angularTodo
-      - run:
-          yarn install
-        working-directory :
-          /home/runner/work/angularTodo/angularTodo
+      # - run:
+      #     yarn install
+      #   working-directory :
+      #     /home/runner/work/angularTodo/angularTodo
       # - run:
       #     npm install -g @angular-devkit/build-angular:browser
       # - run:
@@ -61,7 +62,7 @@ jobs:
         # working-directory :
         #   /home/runner/work/angularTodo/angularTodo
       - uses: actions/checkout@v3
-      - run: ng build
+      - run: ng build --configuration=production
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
