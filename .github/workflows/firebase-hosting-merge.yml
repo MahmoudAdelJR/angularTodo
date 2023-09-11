@@ -26,6 +26,7 @@ jobs:
           npm rm -rf node_modules && rm package-lock.json
       - run:
           npm init
+          npm install -g @angular-devkit/build-angular:browser
       - run:
           npm install
       - run:
@@ -35,8 +36,8 @@ jobs:
       #     npm cache clean
       #     npm install -g @angular/cli
       - run: npm ci
-        working-directory :
-          /home/runner/work/angularTodo/angularTodo
+        # working-directory :
+        #   /home/runner/work/angularTodo/angularTodo
       - uses: actions/checkout@v3
       - run: ng build
       - uses: FirebaseExtended/action-hosting-deploy@v0
