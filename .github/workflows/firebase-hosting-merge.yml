@@ -26,8 +26,8 @@ jobs:
         working-directory :
           /home/runner/work/angularTodo/angularTodo
       - run:
-          npm uninstall -g @angular/cli
-          npm cache clean
+          # npm uninstall -g @angular/cli
+          # npm cache clean
           npm install -g @angular/cli
       - uses: actions/checkout@v3
       - run: ng build
