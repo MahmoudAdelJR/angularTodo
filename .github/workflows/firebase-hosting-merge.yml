@@ -28,6 +28,8 @@ jobs:
       #     npm init
       #     npm install
       - run:
+          yarn upgrade --latest
+      - run:
           yarn add @angular-devkit/build-angular:browser
       - run:
           yarn install
