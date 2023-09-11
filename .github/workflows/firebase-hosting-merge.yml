@@ -38,7 +38,7 @@ jobs:
         working-directory :
             /home/runner/work/angularTodo/angularTodo
       - run:
-          yarn add @angular-devkit/build-angular:browser
+          yarn add @angular-devkit/build-angular
         working-directory :
             /home/runner/work/angularTodo/angularTodo
       - run:
