@@ -20,22 +20,24 @@ jobs:
           npm install -g npm@latest
       - run:
           npm install -g @angular/cli
-      - run:
-          npm cache clean --force
-      - run:
-          npm rm -rf node_modules && rm package-lock.json
+      # - run:
+      #     npm cache clean --force
+      # - run:
+      #     npm rm -rf node_modules && rm package-lock.json
       # - run:
       #     npm init
       #     npm install
       - run:
-          npm install
+          yarn install
+        working-directory :
+          /home/runner/work/angularTodo/angularTodo
       # - run:
       #     npm install -g @angular-devkit/build-angular:browser
       # - run:
       #     npm uninstall -g @angular/cli
       #     npm cache clean
       #     npm install -g @angular/cli
-      - run: npm ci
+      # - run: npm ci
         # working-directory :
         #   /home/runner/work/angularTodo/angularTodo
       - uses: actions/checkout@v3
