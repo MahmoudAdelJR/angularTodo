@@ -71,6 +71,8 @@ jobs:
         #   /home/runner/work/angularTodo/angularTodo
       - uses: actions/checkout@v3
       - run: ng build --configuration=production
+        working-directory :
+          /home/runner/work/angularTodo/angularTodo
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
