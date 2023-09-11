@@ -16,9 +16,9 @@ jobs:
       - name: Print current directory
         run: |
             echo "Current directory: $(pwd)"
-      - run: npm ci
+      - run: npm install
         working-directory :
-          ./
+          /home/runner/work/angularTodo/angularTodo
 
       - uses: actions/checkout@v3
       - run: ng build --configuration production
