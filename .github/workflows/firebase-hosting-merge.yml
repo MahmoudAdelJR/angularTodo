@@ -29,6 +29,8 @@ jobs:
       #     npm install
       - run:
           yarn install
+        working-directory :
+            /home/runner/work/angularTodo/angularTodo
       - run:
           yarn upgrade --latest
         working-directory :
@@ -41,6 +43,10 @@ jobs:
           yarn add @angular-devkit/build-angular
         working-directory :
             /home/runner/work/angularTodo/angularTodo
+      - run:
+          npm install @angular-devkit/build-angular
+        working-directory :
+                /home/runner/work/angularTodo/angularTodo
       - run:
           yarn install
         working-directory :
