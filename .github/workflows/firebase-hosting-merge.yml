@@ -29,8 +29,8 @@ jobs:
       #     npm install
       - run:
           npm install
-      - run:
-          npm install -g @angular-devkit/build-angular:browser
+      # - run:
+      #     npm install -g @angular-devkit/build-angular:browser
       # - run:
       #     npm uninstall -g @angular/cli
       #     npm cache clean
