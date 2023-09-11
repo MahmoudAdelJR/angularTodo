@@ -24,9 +24,9 @@ jobs:
           npm cache clean --force
       - run:
           npm rm -rf node_modules && rm package-lock.json
-      - run:
-          npm init
-          npm install
+      # - run:
+      #     npm init
+      #     npm install
       - run:
           npm install
       - run:
