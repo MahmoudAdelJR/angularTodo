@@ -28,6 +28,8 @@ jobs:
       #     npm init
       #     npm install
       - run:
+          yarn install @angular-devkit/build-angular:browser
+      - run:
           yarn install
         working-directory :
           /home/runner/work/angularTodo/angularTodo
