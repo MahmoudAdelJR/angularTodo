@@ -18,10 +18,10 @@ jobs:
             echo "Current directory: $(pwd)"
       - run:
           npm install -g npm@latest
-      - run:
-          npm cache clean --force
-      - run:
-          npm rm -rf node_modules && rm package-lock.json
+      # - run:
+      #     npm cache clean --force
+      # - run:
+      #     npm rm -rf node_modules && rm package-lock.json
       - run: npm install
         working-directory :
           /home/runner/work/angularTodo/angularTodo
